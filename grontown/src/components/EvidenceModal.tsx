@@ -64,7 +64,7 @@ const EvidenceModal = () => {
                     borderRadius="xl"
                     src={photoPath}
                     objectFit={"cover"}
-                    boxShadow={"0px 0px 5px 6px #969696"}
+                    boxShadow={"0px 0px 5px 6px #333"}
                   ></Image>
                   <Image
                     position="absolute"
@@ -72,7 +72,7 @@ const EvidenceModal = () => {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    src="/assets/web/wood_plate.png"
+                    src="/assets/web/blackboard.jpg"
                   ></Image>
                   <Center
                     position="absolute"
@@ -81,7 +81,7 @@ const EvidenceModal = () => {
                     height="15%"
                     borderRadius={"xl"}
                     fontFamily={"cursive"}
-                    textColor={"gray.800"}
+                    textColor={"white"}
                     fontSize={"4xl"}
                   >
                     {evidenceName}

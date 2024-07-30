@@ -47,16 +47,22 @@ export default function InstructionsModal() {
       <Box
         as="button"
         width={"100%"}
-        backgroundColor={"gray.700"}
+        height={"23vh"}
+        backgroundColor={"white"}
         padding={4}
+        border={"solid 2px #333"}
         borderRadius={"25px"}
         transition="transform 0.3s ease-in-out"
-        _hover={{ transform: "scale(1.1)", cursor: "pointer" }}
+        _hover={{
+          transform: "scale(1.05)",
+          cursor: "pointer",
+          backgroundColor: "#f1f1f1",
+        }}
         onClick={open}
       >
         <VStack>
           <Image
-            src="/assets/web/instructions.png"
+            src="/assets/web/detective.png"
             alt="button image"
             width={"100%"}
           />
@@ -81,7 +87,7 @@ export default function InstructionsModal() {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    src="/assets/web/wood_plate.png"
+                    src="/assets/web/blackboard.jpg"
                   ></Image>
                   <Center
                     position="absolute"
@@ -90,7 +96,7 @@ export default function InstructionsModal() {
                     height="15%"
                     borderRadius={"xl"}
                     fontFamily={"cursive"}
-                    textColor={"gray.800"}
+                    textColor={"white"}
                     fontSize={"5xl"}
                   >
                     Shock in San Francisco!
@@ -107,15 +113,15 @@ export default function InstructionsModal() {
                 <br />
                 Controls:
                 <br />
-                Move with WASD or arrow keys.
+                [WASD] 또는 방향키로 움직이세요
                 <br />
                 [Space] to speak to people when the prompt appears.
                 <br />
                 [Space] to examine evidence. There will be no indication you are
                 near an important piece of evidence. Pay attention!
                 <br />
-                Tip: use the built-in notes to keep track of alibis and
-                cross-reference testimony.
+                Tip: 우측의 노트를 이용해 증거와 알리바이를 수집하고
+                교차검증하세요
               </Text>
             </HStack>
           </ModalBody>

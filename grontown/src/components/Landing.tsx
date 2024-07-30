@@ -61,7 +61,7 @@ export const Landing = (props: LandingProps) => {
         direction={{ base: "column-reverse", xl: "row" }}
       >
         <Box
-          bg="blue.800"
+          bg="white"
           padding={{ base: "3", xl: "4" }}
           boxShadow="xl"
           flex="1"
@@ -78,7 +78,7 @@ export const Landing = (props: LandingProps) => {
                 width="30%"
               />
               <Text fontFamily="vt323" fontSize="6xl" align={"center"}>
-                nob hill noir
+                Prometheus
               </Text>
             </VStack>
 
@@ -90,7 +90,7 @@ export const Landing = (props: LandingProps) => {
             >
               <Box
                 padding={{ base: "2", xl: "8" }}
-                bgColor="gray.400"
+                bgColor="black"
                 borderRadius="md"
                 boxShadow="md"
                 marginBottom={{ base: "1", xl: "3" }}
@@ -104,7 +104,7 @@ export const Landing = (props: LandingProps) => {
               >
                 <Text
                   fontSize="4xl"
-                  color={"blue.800"}
+                  color={"white"}
                   marginBottom={6}
                   fontFamily="vt323"
                 >
@@ -130,7 +130,7 @@ export const Landing = (props: LandingProps) => {
                       <Button
                         width="100%"
                         size="lg"
-                        colorScheme="green"
+                        colorScheme="red"
                         rightIcon={<ArrowForwardIcon />}
                         onClick={() => navigate("/game")}
                       >

@@ -39,16 +39,22 @@ const NotesModal = ({ notes, setNotes }: NotesModalProps) => {
       <Box
         as="button"
         width={"100%"}
-        backgroundColor={"gray.700"}
+        height={"23vh"}
+        backgroundColor={"white"}
         padding={4}
+        border={"solid 2px #333"}
         borderRadius={"25px"}
         transition="transform 0.3s ease-in-out"
-        _hover={{ transform: "scale(1.1)", cursor: "pointer" }}
+        _hover={{
+          transform: "scale(1.05)",
+          cursor: "pointer",
+          backgroundColor: "#f1f1f1",
+        }}
         onClick={open}
       >
         <VStack>
           <Image
-            src="/assets/web/typewriter.png"
+            src="/assets/web/instruction.png"
             alt="button image"
             width={"100%"}
           />

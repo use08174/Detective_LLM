@@ -32,64 +32,61 @@ function createCharacter(partial: PartialCharacter): Character {
 }
 
 const characters: Record<string, Character> = {
-  "Li Wei": createCharacter({
-    eastworldId: "Li Wei",
-    sprite: "li_wei",
-    photo: "assets/photos/li_wei.jpeg",
-    actions: [
-      {
-        name: "RunAway",
-        startFrame: 1,
-        endFrame: 9,
-        frameRate: 32,
-      },
-    ],
-  }),
   detective: createCharacter({
     eastworldId: "Detective Samuel O'Connor",
     sprite: "detective",
     photo: "assets/photos/detective.jpeg",
     arrestable: false,
   }),
-  "Sumin": createCharacter({
+  Sumin: createCharacter({
     eastworldId: "Sumin",
     sprite: "mei_lin",
     photo: "assets/photos/mei_lin.jpeg",
   }),
-  "William Harrington": createCharacter({
-    eastworldId: "William Harrington",
-    sprite: "william_harrington",
-    photo: "assets/photos/william_harrington.jpeg",
-    actions: [
-      {
-        name: "Cane",
-        startFrame: 1,
-        endFrame: 7,
-        frameRate: 12,
-      },
-    ],
+
+  David: createCharacter({
+    sprite: "police_officer",
+    photo: "assets/photos/police_chief.jpeg",
+    interactTopic: Topics.enterArrestModal,
+    arrestable: false,
   }),
-  "Victoria Ashford": createCharacter({
-    eastworldId: "Victoria Ashford",
-    sprite: "victoria_ashford",
-    photo: "assets/photos/victoria_ashford.jpeg",
+
+  Kim: createCharacter({
+    sprite: "police_officer",
+    photo: "assets/photos/police_chief.jpeg",
+    interactTopic: Topics.enterArrestModal,
+    arrestable: false,
   }),
-  "Amelia Turner": createCharacter({
-    eastworldId: "Amelia Turner",
-    sprite: "amelia_turner",
-    photo: "assets/photos/amelia_turner.jpeg",
+
+  Woohyun: createCharacter({
+    sprite: "police_officer",
+    photo: "assets/photos/police_chief.jpeg",
+    interactTopic: Topics.enterArrestModal,
+    arrestable: false,
   }),
-  "Percival Thornton": createCharacter({
-    eastworldId: "Percival Thornton",
-    sprite: "percival_thornton",
-    photo: "assets/photos/percival_thornton.jpeg",
+
+  Soyeon: createCharacter({
+    sprite: "police_officer",
+    photo: "assets/photos/police_chief.jpeg",
+    interactTopic: Topics.enterArrestModal,
+    arrestable: false,
   }),
-  "Dr. Eleanor Bennett": createCharacter({
-    eastworldId: "Dr. Eleanor Bennett",
-    sprite: "eleanor_bennett",
-    photo: "assets/photos/eleanor_bennett.jpeg",
+
+  Jiyoon: createCharacter({
+    sprite: "police_officer",
+    photo: "assets/photos/police_chief.jpeg",
+    interactTopic: Topics.enterArrestModal,
+    arrestable: false,
   }),
-  "Police Chief Locke": createCharacter({
+
+  Eunha: createCharacter({
+    sprite: "police_officer",
+    photo: "assets/photos/police_chief.jpeg",
+    interactTopic: Topics.enterArrestModal,
+    arrestable: false,
+  }),
+
+  Letter: createCharacter({
     sprite: "police_officer",
     photo: "assets/photos/police_chief.jpeg",
     interactTopic: Topics.enterArrestModal,
