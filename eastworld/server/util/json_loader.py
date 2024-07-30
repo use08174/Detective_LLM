@@ -10,7 +10,7 @@ def load_game_from_json_string(json_string: str) -> GameDef:
 
 
 def load_game_from_path(path: str) -> GameDef:
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf-8") as f:
         json_string = f.read()
     return load_game_from_json_string(json_string)
 
