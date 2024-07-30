@@ -37,7 +37,7 @@ export const GameManager = () => {
   useEffect(() => {
     const fetchSession = async () => {
       var sessionUuid = getGameState().sessionUuid;
-      const gameUuid = "5dcd12ef-7489-4d5e-9ce1-202451fd1c5f";
+      const gameUuid = "ad1e3ffb-03e3-4275-809e-941c307ee9cf";
       if (
         !sessionUuid ||
         !(await eastworldClient.gameSessions.isSessionActive(sessionUuid))
