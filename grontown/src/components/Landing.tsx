@@ -77,7 +77,7 @@ export const Landing = (props: LandingProps) => {
                 height="30%"
                 width="30%"
               />
-              <Text fontFamily="vt323" fontSize="6xl" align={"center"}>
+              <Text fontFamily="aurora" fontSize="6xl" align={"center"}>
                 Prometheus
               </Text>
             </VStack>
@@ -106,13 +106,13 @@ export const Landing = (props: LandingProps) => {
                   fontSize="4xl"
                   color={"white"}
                   marginBottom={6}
-                  fontFamily="vt323"
+                  fontFamily="corrupted"
                 >
                   Play
                 </Text>
                 <VStack
                   spacing={{ base: "3", xl: "6" }}
-                  fontFamily={"vt323"}
+                  fontFamily={"lovan"}
                   marginBottom={3}
                 >
                   <BrowserView>

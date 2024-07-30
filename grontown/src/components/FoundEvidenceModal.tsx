@@ -67,7 +67,11 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
       >
         <VStack>
           <Image src="/assets/web/clue.png" alt="button image" width={"80%"} />
-          {!isSmallScreen && <Heading size="lg">Clues</Heading>}
+          {!isSmallScreen && (
+            <Heading fontFamily="aurora" size="lg">
+              Clues
+            </Heading>
+          )}
         </VStack>
       </Box>
       <Modal isOpen={isOpen} onClose={close} isCentered size={"2xl"}>

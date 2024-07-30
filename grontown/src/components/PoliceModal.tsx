@@ -129,7 +129,7 @@ How close is this to the actual plot?
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    src="/assets/web/wood_plate.png"
+                    src="/assets/web/blackboard.jpg"
                   ></Image>
                   <Center
                     position="absolute"
