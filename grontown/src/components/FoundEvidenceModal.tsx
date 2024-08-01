@@ -51,12 +51,12 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
     <>
       <Box
         as="button"
-        width={"100%"}
+        width={"95%"}
         height={"23vh"}
         backgroundColor={"white"}
         padding={4}
         border={"solid 2px #333"}
-        borderRadius={"25px"}
+        borderRadius={"1vw"}
         transition="transform 0.3s ease-in-out"
         _hover={{
           transform: "scale(1.05)",
@@ -66,9 +66,14 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
         onClick={open}
       >
         <VStack>
-          <Image src="/assets/web/clue.png" alt="button image" width={"80%"} />
+          <Image
+            src="/assets/web/clue.png"
+            alt="button image"
+            width={"70%"}
+            margin="1vh 0 1vh 0"
+          />
           {!isSmallScreen && (
-            <Heading fontFamily="aurora" size="lg">
+            <Heading fontFamily="azonix" size="lg">
               Clues
             </Heading>
           )}
@@ -99,7 +104,11 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
                           evidence[evidenceKey as keyof typeof evidence].photo
                         }
                       />
-                      <Text fontSize={"xl"} whiteSpace="pre-wrap">
+                      <Text
+                        fontFamily={"pretendardLight"}
+                        fontSize={"xl"}
+                        whiteSpace="pre-wrap"
+                      >
                         {evidence[evidenceKey as keyof typeof evidence].text}
                       </Text>
                     </AccordionPanel>
@@ -108,6 +117,7 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
               </Accordion>
               {foundEvidence.length > 0 && (
                 <Textarea
+                  fontFamily={"pretendardLight"}
                   placeholder="Notice anything in the evidence? Write it down to yourself here."
                   value={props.notes}
                   rows={10}

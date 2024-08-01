@@ -16,14 +16,20 @@ export const App = () => {
             font-style: normal;
           }
           @font-face {
-            font-family: "BadComa";
-            src: url("/assets/fonts/BadComa.ttf") format("truetype");
+            font-family: "Azonix";
+            src: url("/assets/fonts/Azonix.otf") format("opentype");
             font-weight: normal;
             font-style: normal;
           }
           @font-face {
-            font-family: "ExtraBlur";
-            src: url("/assets/fonts/ExtraBlur.ttf") format("truetype");
+            font-family: "BadSignal";
+            src: url("/assets/fonts/Bad Signal.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: "Threat";
+            src: url("/assets/fonts/Threat.otf") format("opentype");
             font-weight: normal;
             font-style: normal;
           }
@@ -34,20 +40,33 @@ export const App = () => {
             font-style: normal;
           }
           @font-face {
-            font-family: "Corrupted File";
-            src: url("/assets/fonts/Corrupted File.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-          }
-          @font-face {
-            font-family: "Protest Demo";
-            src: url("/assets/fonts/Protest Demo.ttf") format("truetype");
-            font-weight: normal;
-            font-style: normal;
-          }
-          @font-face {
             font-family: "ROMANTIC";
             src: url("/assets/fonts/ROMANTIC.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: "Pretendard-Black";
+            src: url("/assets/fonts/Pretendard-Black.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: "Pretendard-ExtraBold";
+            src: url("/assets/fonts/Pretendard-ExtraBold.otf")
+              format("opentype");
+            font-weight: normal;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: "Pretendard-SemiBold";
+            src: url("/assets/fonts/Pretendard-SemiBold.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+          }
+          @font-face {
+            font-family: "Pretendard-Light";
+            src: url("/assets/fonts/Pretendard-Light.otf") format("opentype");
             font-weight: normal;
             font-style: normal;
           }

@@ -38,57 +38,52 @@ const characters: Record<string, Character> = {
     photo: "assets/photos/detective.jpeg",
     arrestable: false,
   }),
+
   Sumin: createCharacter({
     eastworldId: "Sumin",
     sprite: "mei_lin",
-    photo: "assets/photos/mei_lin.jpeg",
+    photo: "assets/photos/sumin_shim.jpeg",
+    interactTopic: Topics.enterArrestModal,
   }),
 
   David: createCharacter({
     sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
+    photo: "assets/photos/david.jpeg",
     interactTopic: Topics.enterArrestModal,
     arrestable: false,
   }),
 
   Kim: createCharacter({
     sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
+    photo: "assets/photos/kim.jpg",
     interactTopic: Topics.enterArrestModal,
     arrestable: false,
   }),
 
   Woohyun: createCharacter({
     sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
+    photo: "assets/photos/woohyun_jo.jpg",
     interactTopic: Topics.enterArrestModal,
     arrestable: false,
   }),
 
   Soyeon: createCharacter({
     sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
+    photo: "assets/photos/soyeon_bae.jpeg",
     interactTopic: Topics.enterArrestModal,
     arrestable: false,
   }),
 
   Jiyoon: createCharacter({
     sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
+    photo: "assets/photos/jiyoon_jeon.jpeg",
     interactTopic: Topics.enterArrestModal,
     arrestable: false,
   }),
 
   Eunha: createCharacter({
     sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
-    interactTopic: Topics.enterArrestModal,
-    arrestable: false,
-  }),
-
-  Letter: createCharacter({
-    sprite: "police_officer",
-    photo: "assets/photos/police_chief.jpeg",
+    photo: "assets/photos/eunha_seo.jpeg",
     interactTopic: Topics.enterArrestModal,
     arrestable: false,
   }),

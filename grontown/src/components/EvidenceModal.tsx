@@ -80,7 +80,7 @@ const EvidenceModal = () => {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    fontFamily={"cursive"}
+                    fontFamily={"pretendardLight"}
                     textColor={"white"}
                     fontSize={"4xl"}
                   >
@@ -91,6 +91,7 @@ const EvidenceModal = () => {
               <Text
                 color="white"
                 whiteSpace="pre-wrap"
+                fontFamily={"pretendardLight"}
                 fontSize={"xl"}
                 width={"50%"}
               >

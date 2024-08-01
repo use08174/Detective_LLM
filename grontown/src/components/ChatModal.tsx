@@ -203,7 +203,9 @@ const ChatModal = (props: ChatModalProps) => {
                                   : "0"
                               }
                             >
-                              <Text key={index}>{message.content}</Text>
+                              <Text fontFamily={"pretendardLight"} key={index}>
+                                {message.content}
+                              </Text>
                             </Box>
                           ))}
                         </Box>
@@ -216,6 +218,7 @@ const ChatModal = (props: ChatModalProps) => {
                           <Flex width="100%">
                             <FormControl flex="1">
                               <Input
+                                fontFamily={"pretendardLight"}
                                 size={"lg"}
                                 autoComplete="off"
                                 value={message}
@@ -248,6 +251,7 @@ const ChatModal = (props: ChatModalProps) => {
               >
                 <CardBody width="100%" height="100%">
                   <Textarea
+                    fontFamily={"pretendardLight"}
                     size={"lg"}
                     resize={"none"}
                     rows={5}

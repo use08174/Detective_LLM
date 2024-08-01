@@ -158,24 +158,32 @@ How close is this to the actual plot?
                   <CardBody width={"100%"} height={"100%"}>
                     <Flex direction="column" height="100%">
                       <FormControl isInvalid={!suspectValid} marginBottom={6}>
-                        <Heading size={"lg"} marginBottom={2}>
+                        <Heading
+                          fontFamily={"azonix"}
+                          size={"lg"}
+                          marginBottom={2}
+                        >
                           Who should we arrest?
                         </Heading>
                         <Input
+                          fontFamily={"pretendardLight"}
                           size={"lg"}
                           value={suspect}
                           autoComplete="off"
                           placeholder="Full name of the suspect"
                           onChange={e => setSuspect(e.target.value)}
                         />
-                        <FormErrorMessage>Invalid suspect!</FormErrorMessage>
+                        <FormErrorMessage fontFamily={"pretendardLight"}>
+                          Invalid suspect!
+                        </FormErrorMessage>
                       </FormControl>
                       <Flex flex="1">
                         <FormControl height="100%">
-                          <Heading size={"lg"}>
+                          <Heading fontFamily={"azonix"} size={"lg"}>
                             How did it happen and why?
                           </Heading>
                           <Textarea
+                            fontFamily={"pretendardLight"}
                             size={"lg"}
                             resize={"none"}
                             height={"80%"}
@@ -186,6 +194,7 @@ How close is this to the actual plot?
                       </Flex>
                       <Box width="100%">
                         <Button
+                          fontFamily={"azonix"}
                           width="100%"
                           colorScheme="red"
                           flexShrink={0}

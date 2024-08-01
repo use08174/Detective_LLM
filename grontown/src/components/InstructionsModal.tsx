@@ -46,12 +46,12 @@ export default function InstructionsModal() {
     <>
       <Box
         as="button"
-        width={"100%"}
+        width={"95%"}
         height={"23vh"}
         backgroundColor={"white"}
         padding={4}
         border={"solid 2px #333"}
-        borderRadius={"25px"}
+        borderRadius={"1vw"}
         transition="transform 0.3s ease-in-out"
         _hover={{
           transform: "scale(1.05)",
@@ -64,9 +64,14 @@ export default function InstructionsModal() {
           <Image
             src="/assets/web/detective.png"
             alt="button image"
-            width={"100%"}
+            width={"90%"}
+            margin="1vh 0 1vh 0"
           />
-          {!isSmallScreen && <Heading size="lg">Info</Heading>}
+          {!isSmallScreen && (
+            <Heading fontFamily="azonix" size="lg">
+              Info
+            </Heading>
+          )}
         </VStack>
       </Box>
       <Modal isOpen={isOpen} onClose={close} isCentered size={"6xl"}>
@@ -95,15 +100,20 @@ export default function InstructionsModal() {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    fontFamily={"aurora"}
+                    fontFamily={"pretendardSemiBold"}
                     textColor={"white"}
                     fontSize={"5xl"}
                   >
-                    Shock in San Francisco!
+                    정승은 살인사건
                   </Center>
                 </Center>
               </AspectRatio>
-              <Text fontSize={"xl"} width={"50%"} whiteSpace={"pre-wrap"}>
+              <Text
+                fontFamily={"pretendardLight"}
+                fontSize={"xl"}
+                width={"50%"}
+                whiteSpace={"pre-wrap"}
+              >
                 2024년 8월 23일, 프메 고등학교에서 살인사건이 발생했다. 피해자는
                 2학년에 재학 중인 학생회장 정승은. 그는 누구에게, 어떻게 살해된
                 것일까?

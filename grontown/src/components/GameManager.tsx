@@ -111,6 +111,7 @@ export const GameManager = () => {
                   size={{ base: "sm", xl: "lg" }}
                   leftIcon={<StarIcon color="white" />}
                   marginBottom={5}
+                  fontFamily={"pretendardSemiBold"}
                 >
                   GitHub
                 </Button>

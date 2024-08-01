@@ -38,12 +38,12 @@ const NotesModal = ({ notes, setNotes }: NotesModalProps) => {
     <>
       <Box
         as="button"
-        width={"100%"}
+        width={"95%"}
         height={"23vh"}
         backgroundColor={"white"}
         padding={4}
         border={"solid 2px #333"}
-        borderRadius={"25px"}
+        borderRadius={"1vw"}
         transition="transform 0.3s ease-in-out"
         _hover={{
           transform: "scale(1.05)",
@@ -56,9 +56,13 @@ const NotesModal = ({ notes, setNotes }: NotesModalProps) => {
           <Image
             src="/assets/web/instruction.png"
             alt="button image"
-            width={"100%"}
+            width={"90%"}
           />
-          {!isSmallScreen && <Heading size="lg">Notes</Heading>}
+          {!isSmallScreen && (
+            <Heading fontFamily="azonix" size="lg">
+              Notes
+            </Heading>
+          )}
         </VStack>
       </Box>
       <Modal isOpen={isOpen} onClose={close} isCentered>
@@ -66,6 +70,7 @@ const NotesModal = ({ notes, setNotes }: NotesModalProps) => {
         <ModalContent maxW="fit-content" maxH={"fit-content"}>
           <ModalBody width={"50vw"} padding={4}>
             <Textarea
+              fontFamily={"pretendardLight"}
               value={notes}
               rows={30}
               placeholder="Notes"

@@ -3,15 +3,15 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   fonts: {
     aurora: "Aurora, sanserif",
-    badcoma: "BadComa, sanserif",
-    extrablur: "ExtraBlur, sanserif",
+    azonix: "Azonix, sanserif",
+    badsignal: "BadSignal, sanserif",
+    threat: "Threat, sanserif",
     romantic: "ROMANTIC, sanserif",
-    corrupted: "Corrupted File, sanserif",
-    protest: "Protest Demo, sanserif",
     lovan: "Lovan, sanserif",
-    ptserif: "PT Serif, serif",
-    cursive: "Pinyon Script, handwriting",
-    vt323: "VT323, monospace",
+    pretendardBlack: "Pretendard-Black, sanserif",
+    pretendardExtraBold: "Pretendard-ExtraBold, sanserif",
+    pretendardSemiBold: "Pretendard-SemiBold, sanserif",
+    pretendardLight: "Pretendard-Light, sanserif",
   },
 
   config: {
