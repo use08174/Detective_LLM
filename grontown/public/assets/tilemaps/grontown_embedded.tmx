@@ -34,7 +34,7 @@
   <image source="../tilesets/trees-green.png" width="1024" height="1024"/>
  </tileset>
  <tileset firstgid="22785" source="Fulltilemap.tsx"/>
- <layer id="19" name="Ground Level" width="50" height="70" visible="0">
+ <layer id="19" name="Ground Level" width="50" height="70">
   <data encoding="csv">
 10082,10081,10081,10082,10083,10082,10083,10083,10081,10082,10083,10081,10082,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10081,10082,10081,10081,10081,10081,10082,10083,10081,10082,10083,10083,
 10082,10081,10081,10081,10082,10083,10083,10083,10082,10083,10083,10081,10082,10083,22836,22837,22838,22839,22836,22837,22838,22839,23091,23091,23091,23091,23091,23091,23091,23091,23091,23091,23091,22841,22836,22837,22838,22839,22836,22837,22838,22839,22836,10081,10082,10083,10081,10082,10083,10081,
@@ -335,28 +335,28 @@
   <object id="178" name="Spawn Point" x="857.143" y="575.316">
    <point/>
   </object>
-  <object id="180" name="David" x="120.465" y="200.806">
+  <object id="180" name="David" x="1120.64" y="729.395">
    <point/>
   </object>
-  <object id="181" name="Sumin" x="324.229" y="125.947">
+  <object id="181" name="Sumin" x="512.517" y="272.777">
    <point/>
   </object>
-  <object id="182" name="Kim" x="201.903" y="186.765">
+  <object id="182" name="Kim" x="1253.9" y="874.276">
    <point/>
   </object>
-  <object id="183" name="Woohyun" x="237.005" y="192.381">
+  <object id="183" name="Woohyun" x="544.485" y="572.412">
    <point/>
   </object>
-  <object id="184" name="Soyeon" x="270.704" y="186.765">
+  <object id="184" name="Soyeon" x="725.014" y="858.729">
    <point/>
   </object>
-  <object id="185" name="Jiyoon" x="144.335" y="220.463">
+  <object id="185" name="Jiyoon" x="650.467" y="218.736">
    <point/>
   </object>
-  <object id="186" name="Eunha" type="Police Chief Locke" x="178.322" y="182.433">
+  <object id="186" name="Eunha" type="Police Chief Locke" x="710.366" y="1096.24">
    <point/>
   </object>
-  <object id="193" name="Letter" x="187.862" y="46.355">
+  <object id="193" name="Letter" x="151.586" y="357.29">
    <point/>
   </object>
  </objectgroup>
