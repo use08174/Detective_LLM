@@ -47,45 +47,45 @@ const characters: Record<string, Character> = {
   }),
 
   David: createCharacter({
+    eastworldId: "David",
     sprite: "police_officer",
     photo: "assets/photos/david.jpeg",
     interactTopic: Topics.enterArrestModal,
-    arrestable: false,
   }),
 
   Kim: createCharacter({
+    eastworldId: "Kim",
     sprite: "police_officer",
     photo: "assets/photos/kim.jpg",
     interactTopic: Topics.enterArrestModal,
-    arrestable: false,
   }),
 
   Woohyun: createCharacter({
+    eastworldId: "Woohyun",
     sprite: "police_officer",
     photo: "assets/photos/woohyun_jo.jpg",
     interactTopic: Topics.enterArrestModal,
-    arrestable: false,
   }),
 
   Soyeon: createCharacter({
+    eastworldId: "Soyeon",
     sprite: "police_officer",
     photo: "assets/photos/soyeon_bae.jpeg",
     interactTopic: Topics.enterArrestModal,
-    arrestable: false,
   }),
 
   Jiyoon: createCharacter({
+    eastworldId: "Jiyoon",
     sprite: "police_officer",
     photo: "assets/photos/jiyoon_jeon.jpeg",
     interactTopic: Topics.enterArrestModal,
-    arrestable: false,
   }),
 
   Eunha: createCharacter({
+    eastworldId: "Eunha",
     sprite: "police_officer",
     photo: "assets/photos/eunha_seo.jpeg",
     interactTopic: Topics.enterArrestModal,
-    arrestable: false,
   }),
 };
 

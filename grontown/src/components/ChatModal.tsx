@@ -24,6 +24,7 @@ import Topics from "rpg/data/topics";
 import { EastworldClient, Message } from "eastworld-client";
 import { useEffect, useRef, useState } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { EnglishToKorean } from "./util/Korean";
 
 type ChatModalProps = {
   sessionId: string;
@@ -153,7 +154,7 @@ const ChatModal = (props: ChatModalProps) => {
                       textColor={"white"}
                       fontSize={"5xl"}
                     >
-                      {agentName}
+                      {EnglishToKorean(agentName)}
                     </Center>
                   </Center>
                 </AspectRatio>

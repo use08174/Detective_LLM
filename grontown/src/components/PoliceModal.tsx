@@ -26,15 +26,7 @@ import { useEffect, useState } from "react";
 import story from "rpg/data/story";
 import { GameResult, ResultScreenProps } from "./ResultScreen";
 import { logEndGame } from "analytics";
-
-function capitalizeName(name: string) {
-  return name
-    .trim()
-    .replace(
-      /\w\S*/g,
-      word => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase(),
-    );
-}
+import { KoreanToEnglish } from "./util/Korean";
 
 type PoliceModalProps = {
   eastworldClient: EastworldClient;
@@ -47,7 +39,7 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
   const [explanation, setExplanation] = useState("");
 
   useEffect(() => {
-    let sanitizedName = capitalizeName(suspect);
+    let sanitizedName = KoreanToEnglish(suspect);
 
     setSuspectValid(
       sanitizedName in characters && characters[sanitizedName].arrestable,
@@ -64,7 +56,7 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
   };
 
   const arrest = async () => {
-    if (suspect.toLocaleLowerCase() === "victoria ashford") {
+    if (KoreanToEnglish(suspect) === "Eunha") {
       const score = await eastworldClient.llm.rate(
         `A player is playing a murder mystery game as a detective.
 The actual plot they should discover is as follows:
@@ -85,7 +77,7 @@ How close is this to the actual plot?
     } else {
       const result: ResultScreenProps = {
         status: GameResult.LOSS,
-        suspect: capitalizeName(suspect),
+        suspect: KoreanToEnglish(suspect),
       };
       PubSub.publish(Topics.endGame, result);
       logEndGame(false);
