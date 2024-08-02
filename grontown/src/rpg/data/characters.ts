@@ -33,7 +33,7 @@ function createCharacter(partial: PartialCharacter): Character {
 
 const characters: Record<string, Character> = {
   detective: createCharacter({
-    eastworldId: "Detective Samuel O'Connor",
+    eastworldId: "Detective",
     sprite: "detective",
     photo: "assets/photos/detective.jpeg",
     arrestable: false,
@@ -43,7 +43,7 @@ const characters: Record<string, Character> = {
     eastworldId: "Sumin",
     sprite: "mei_lin",
     photo: "assets/photos/sumin_shim.jpeg",
-    interactTopic: Topics.enterArrestModal,
+    interactTopic: Topics.enterChat,
   }),
 
   David: createCharacter({
