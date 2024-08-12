@@ -1,8 +1,7 @@
 const story = {
-  explanation: `Victoria Ashford and Li Wei conspired to kill Elias Harrington. 
-Li Wei distracted everyone while Victoria Ashford poisoned Elias' cup with
-gruel flower. They did so because he was threatening to expose their affair and
-deport Li Wei.`,
+  explanation: `전지윤은 정승은의 지속적인 구애와 스토킹에 지쳐 그를 살해하였습니다.
+  전지윤은 김 선생님의 고혈압 약을 훔쳐서 음료수에 섞어 정승은에게 판매했습니다.
+  정승은은 유명한 스테로이드 복용자였기 때문에, 스테로이드와 고혈압 약을 동시에 섭취한 부작용으로 인해 무대에서 춤을 추던 도중 심장 마비로 사망하였습니다.`,
 };
 
 export default story;

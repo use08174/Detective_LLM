@@ -46,21 +46,32 @@ export default function InstructionsModal() {
     <>
       <Box
         as="button"
-        width={"100%"}
-        backgroundColor={"gray.700"}
+        width={"95%"}
+        height={"23vh"}
+        backgroundColor={"white"}
         padding={4}
-        borderRadius={"25px"}
+        border={"solid 2px #333"}
+        borderRadius={"1vw"}
         transition="transform 0.3s ease-in-out"
-        _hover={{ transform: "scale(1.1)", cursor: "pointer" }}
+        _hover={{
+          transform: "scale(1.05)",
+          cursor: "pointer",
+          backgroundColor: "#f1f1f1",
+        }}
         onClick={open}
       >
         <VStack>
           <Image
-            src="/assets/web/instructions.png"
+            src="/assets/web/detective.png"
             alt="button image"
-            width={"100%"}
+            width={"90%"}
+            margin="1vh 0 1vh 0"
           />
-          {!isSmallScreen && <Heading size="lg">Info</Heading>}
+          {!isSmallScreen && (
+            <Heading fontFamily="azonix" size="lg">
+              Info
+            </Heading>
+          )}
         </VStack>
       </Box>
       <Modal isOpen={isOpen} onClose={close} isCentered size={"6xl"}>
@@ -81,7 +92,7 @@ export default function InstructionsModal() {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    src="/assets/web/wood_plate.png"
+                    src="/assets/web/blackboard.jpg"
                   ></Image>
                   <Center
                     position="absolute"
@@ -89,33 +100,44 @@ export default function InstructionsModal() {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    fontFamily={"cursive"}
-                    textColor={"gray.800"}
+                    fontFamily={"pretendardSemiBold"}
+                    textColor={"white"}
                     fontSize={"5xl"}
                   >
-                    Shock in San Francisco!
+                    정승은 살인사건
                   </Center>
                 </Center>
               </AspectRatio>
-              <Text fontSize={"xl"} width={"50%"} whiteSpace={"pre-wrap"}>
-                You are Detective Samuel O'Connor, called to investigate the
-                suspicious death of Elias Harrington, one of the wealthiest men
-                in San Francisco. Use your wits and your detective skills to
-                find evidence, interrogate suspects, and piece together what
-                happened.
+              <Text
+                fontFamily={"pretendardLight"}
+                fontSize={"xl"}
+                width={"50%"}
+                whiteSpace={"pre-wrap"}
+              >
+                2024년 8월 23일, 프메 고등학교에서 살인사건이 발생했다. 피해자는
+                2학년에 재학 중인 학생회장 정승은. 그는 누구에게, 어떻게 살해된
+                것일까?
+                <br />
+                <br />
+                당신은 살인 사건의 범인을 찾기 위해 파견된 탐정 김프메입니다.
+                지혜와 기술을 사용하여 증거를 찾고, 용의자를 심문하며, 무슨 일이
+                일어났는지 파악하세요.
+                <br />
                 <br />
                 <br />
                 Controls:
                 <br />
-                Move with WASD or arrow keys.
+                [WASD] 또는 방향키로 움직이세요
                 <br />
-                [Space] to speak to people when the prompt appears.
+                [Space] 키를 눌러서 대화할 수 있을 때 나타나는 프롬프트에서
+                사람들과 대화하세요.
                 <br />
-                [Space] to examine evidence. There will be no indication you are
-                near an important piece of evidence. Pay attention!
+                [Space] 키를 눌러 증거를 조사하세요. 중요한 증거 근처에 있을 때
+                별도의 표시가 없으므로 주의 깊게 살펴보세요!
                 <br />
-                Tip: use the built-in notes to keep track of alibis and
-                cross-reference testimony.
+                <br />
+                Tip: 우측의 노트를 이용해 증거와 알리바이를 수집하고
+                교차검증하세요
               </Text>
             </HStack>
           </ModalBody>

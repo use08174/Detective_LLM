@@ -113,7 +113,8 @@ export default class Main extends Phaser.Scene {
         object => object.name === characterName,
       )!;
 
-      
+      console.log(characterName);
+
       const npc = new Npc(
         characterDef,
         this,
@@ -138,7 +139,7 @@ export default class Main extends Phaser.Scene {
         "Misc",
         object => object.name === evidence_piece,
       )!;
-      console.log(evidence_piece)
+      console.log(evidence_piece);
 
       this.evidences.push(
         new Evidence(

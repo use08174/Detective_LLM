@@ -37,13 +37,14 @@ export const GameManager = () => {
   useEffect(() => {
     const fetchSession = async () => {
       var sessionUuid = getGameState().sessionUuid;
-      const gameUuid = "5dcd12ef-7489-4d5e-9ce1-202451fd1c5f";
+      const gameUuid = "ad1e3ffb-03e3-4275-809e-941c307ee9cf";
       if (
         !sessionUuid ||
         !(await eastworldClient.gameSessions.isSessionActive(sessionUuid))
       ) {
-        sessionUuid =
-          await eastworldClient.gameSessions.createSession(gameUuid);
+        sessionUuid = await eastworldClient.gameSessions.createSession(
+          gameUuid,
+        );
         getGameState().sessionUuid = sessionUuid;
         saveGameState();
       }
@@ -103,13 +104,14 @@ export const GameManager = () => {
                 <Spacer />
                 <Button
                   as="a"
-                  href="https://www.github.com/mluogh/grontown"
+                  href="https://github.com/hypoxisaurea/large-language-murder"
                   target="_blank"
                   rel="noopener noreferrer"
-                  colorScheme="purple"
+                  colorScheme="red"
                   size={{ base: "sm", xl: "lg" }}
-                  leftIcon={<StarIcon color="yellow" />}
+                  leftIcon={<StarIcon color="white" />}
                   marginBottom={5}
+                  fontFamily={"pretendardSemiBold"}
                 >
                   GitHub
                 </Button>

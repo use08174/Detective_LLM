@@ -24,6 +24,7 @@ import Topics from "rpg/data/topics";
 import { EastworldClient, Message } from "eastworld-client";
 import { useEffect, useRef, useState } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { EnglishToKorean } from "./util/Korean";
 
 type ChatModalProps = {
   sessionId: string;
@@ -133,7 +134,7 @@ const ChatModal = (props: ChatModalProps) => {
                       borderRadius="xl"
                       src={photoPath}
                       objectFit={"cover"}
-                      boxShadow={"0px 0px 5px 6px #969696"}
+                      boxShadow={"0px 0px 5px 6px #333"}
                     ></Image>
                     <Image
                       position="absolute"
@@ -141,7 +142,7 @@ const ChatModal = (props: ChatModalProps) => {
                       width="100%"
                       height="15%"
                       borderRadius={"xl"}
-                      src="/assets/web/wood_plate.png"
+                      src="/assets/web/blackboard.jpg"
                     ></Image>
                     <Center
                       position="absolute"
@@ -150,10 +151,10 @@ const ChatModal = (props: ChatModalProps) => {
                       height="15%"
                       borderRadius={"xl"}
                       fontFamily={"cursive"}
-                      textColor={"gray.800"}
+                      textColor={"white"}
                       fontSize={"5xl"}
                     >
-                      {agentName}
+                      {EnglishToKorean(agentName)}
                     </Center>
                   </Center>
                 </AspectRatio>
@@ -164,7 +165,7 @@ const ChatModal = (props: ChatModalProps) => {
                   paddingLeft={3}
                   paddingRight={3}
                   borderRadius="xl"
-                  boxShadow={"0px 0px 5px 6px #969696"}
+                  boxShadow={"0px 0px 5px 6px #333"}
                   onClick={handleCardClick}
                 >
                   <Card width="100%" height="100%" fontFamily={"ptserif"}>
@@ -203,7 +204,9 @@ const ChatModal = (props: ChatModalProps) => {
                                   : "0"
                               }
                             >
-                              <Text key={index}>{message.content}</Text>
+                              <Text fontFamily={"pretendardLight"} key={index}>
+                                {message.content}
+                              </Text>
                             </Box>
                           ))}
                         </Box>
@@ -216,6 +219,7 @@ const ChatModal = (props: ChatModalProps) => {
                           <Flex width="100%">
                             <FormControl flex="1">
                               <Input
+                                fontFamily={"pretendardLight"}
                                 size={"lg"}
                                 autoComplete="off"
                                 value={message}
@@ -225,7 +229,7 @@ const ChatModal = (props: ChatModalProps) => {
                             <IconButton
                               ml={2}
                               flexShrink={0}
-                              colorScheme="orange"
+                              colorScheme="red"
                               size={"lg"}
                               type="submit"
                               aria-label="Submit"
@@ -243,11 +247,12 @@ const ChatModal = (props: ChatModalProps) => {
                 maxW={"2250px"}
                 height={"20%"}
                 borderRadius="xl"
-                boxShadow={"0px 0px 5px 6px #969696"}
+                boxShadow={"0px 0px 5px 6px #333"}
                 onClick={handleCardClick}
               >
                 <CardBody width="100%" height="100%">
                   <Textarea
+                    fontFamily={"pretendardLight"}
                     size={"lg"}
                     resize={"none"}
                     rows={5}

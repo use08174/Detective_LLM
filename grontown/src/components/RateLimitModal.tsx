@@ -42,8 +42,10 @@ const RateLimitModal = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalBody padding={10}>
-            <Heading marginBottom={5}>Uh oh! Rate Limiting.</Heading>
-            <Text>
+            <Heading fontFamily={"pretendardLight"} marginBottom={5}>
+              Uh oh! Rate Limiting.
+            </Heading>
+            <Text fontFamily={"pretendardLight"}>
               Unfortunately, since this is a free and open source project, we
               don't have the compute or money to allow everyone unlimited
               inference. You can continue playing tomorrow, or go on GitHub and
