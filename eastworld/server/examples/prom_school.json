@@ -95,6 +95,59 @@
     }
   ],
   "shared_lore": [
-
+    {
+      "known_by": ["8aa13bfc-e804-47be-9f94-a4e8c6a020f5", "b9f9d7a6-43de-40b5-b187-eb4a450828cf", "b1e7b548-2144-4c15-9d3e-9985b401a302", "3a9eb957-bd38-4f45-9f1e-9c3de377135a", "11f7ce4a-632a-4813-9748-fe94e65ca066", "44c110d9-4ad3-40f9-8b0e-176c29164489", "3fd6d693-9a72-471d-a7db-e0f7de7dcb1e", "24d386bd-ad16-47e5-a999-779452d07fc6"],
+      "memory": {
+        "importance": 10,
+        "description": "8월 23일 프메 고등학교 축제에서 살인 사건이 발생했다. 오전 10시부터 12시까지는 부스 준비 기간이었고, 12시부터 오후 2시까지는 동아리 부스 운영 기간이었다.",
+        "embedding": null,
+        "timestamp": null
+      }
+    },
+    {
+      "known_by": ["8aa13bfc-e804-47be-9f94-a4e8c6a020f5", "b9f9d7a6-43de-40b5-b187-eb4a450828cf", "3a9eb957-bd38-4f45-9f1e-9c3de377135a"],
+      "memory": {
+        "importance": 8,
+        "description": "데이비드, 우현, 승은은 12시에 잠깐 리허설을 준비하다가 12시 반에 부스 구경을 위해 각자 헤어졌다.",
+        "embedding": null,
+        "timestamp": null
+      }
+    },
+    {
+      "known_by": ["8aa13bfc-e804-47be-9f94-a4e8c6a020f5", "b1e7b548-2144-4c15-9d3e-9985b401a302", "b9f9d7a6-43de-40b5-b187-eb4a450828cf", "3fd6d693-9a72-471d-a7db-e0f7de7dcb1e", "24d386bd-ad16-47e5-a999-779452d07fc6"],
+      "memory": {
+        "importance": 9,
+        "description": "Kim 선생님은 고혈압이기 때문에 고혈압 약을 복용 중이었다.",
+        "embedding": null,
+        "timestamp": null
+      }
+    },
+    {
+      "known_by": ["8aa13bfc-e804-47be-9f94-a4e8c6a020f5", "11f7ce4a-632a-4813-9748-fe94e65ca066", "44c110d9-4ad3-40f9-8b0e-176c29164489", "3a9eb957-bd38-4f45-9f1e-9c3de377135a", "24d386bd-ad16-47e5-a999-779452d07fc6"],
+      "memory": {
+        "importance": 9,
+        "description": "정승은은 근육을 위해 스테로이드를 사용하고 있었다.",
+        "embedding": null,
+        "timestamp": null
+      }
+    },
+    {
+      "known_by": ["8aa13bfc-e804-47be-9f94-a4e8c6a020f5", "b9f9d7a6-43de-40b5-b187-eb4a450828cf", "b1e7b548-2144-4c15-9d3e-9985b401a302", "3a9eb957-bd38-4f45-9f1e-9c3de377135a", "11f7ce4a-632a-4813-9748-fe94e65ca066", "44c110d9-4ad3-40f9-8b0e-176c29164489", "3fd6d693-9a72-471d-a7db-e0f7de7dcb1e", "24d386bd-ad16-47e5-a999-779452d07fc6"],
+      "memory": {
+        "importance": 10,
+        "description": "오후 2시에 강당에서 공연을 하다가 2시 10분 쯤 강당이 암전 상태가 되었고, 이 때 정승은이 '어억'하는 소리와 함께 쓰러졌다. 이 장면은 거의 전교생이 목격했다.",
+        "embedding": null,
+        "timestamp": null
+      }
+    },
+    {
+      "known_by": ["8aa13bfc-e804-47be-9f94-a4e8c6a020f5"],
+      "memory": {
+        "importance": 8,
+        "description": "정확한 사인은 알 수 없으나, 탐정은 독극물 혹은 뇌진탕에 의한 것이라고 의심하고 있다.",
+        "embedding": null,
+        "timestamp": null
+      }
+    }
   ]
 }
