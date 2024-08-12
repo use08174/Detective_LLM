@@ -114,29 +114,29 @@ const ResultScreen = (props: ResultScreenProps) => {
                     {props.status === GameResult.WIN && (
                         <HStack>
                             <Button colorScheme="green" onClick={newGame}>
-                                New Game
+                                새 게임
                             </Button>
                         </HStack>
                     )}
                     {props.status === GameResult.DEAD && (
                         <HStack>
                             <Button colorScheme="red" onClick={newGame}>
-                                New Game
+                                새 게임
                             </Button>
                             <Spacer width={"30%"}/>
                             <Button colorScheme="teal" onClick={continueGame}>
-                                Leave the Hospital and Continue
+                                이어하기
                             </Button>
                         </HStack>
                     )}
                     {props.status === GameResult.LOSS && (
                         <HStack>
                             <Button colorScheme="red" onClick={newGame}>
-                                New Game
+                                새 게임
                             </Button>
                             <Spacer width={"30%"}/>
                             <Button colorScheme="teal" onClick={continueGame}>
-                                Continue the Investigation
+                                이어하기
                             </Button>
                         </HStack>
                     )}
