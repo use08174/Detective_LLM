@@ -17,8 +17,9 @@
     "@types/node": "^12.20.55",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
-    "axios": "^1.5.0",
+    "axios": "^1.7.3",
     "framer-motion": "^6.5.1",
+    "grontown": "file:",
     "http-proxy-middleware": "^2.0.6",
     "phaser": "^3.60.0",
     "pubsub-js": "^1.9.4",
@@ -36,7 +37,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "build-debug": "GENERATE_SOURCEMAP=true react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -63,6 +64,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@types/pubsub-js": "^1.8.3",
+    "cross-env": "^7.0.3",
     "openapi-typescript-codegen": "^0.25.0"
   }
 }
