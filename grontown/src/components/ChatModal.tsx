@@ -49,14 +49,15 @@ const ChatModal = (props: ChatModalProps) => {
 
   useEffect(() => {
     if (!agentName) return;
+
     setMessageHistory([]);
+
     props.eastworldClient.gameSessions.startChat(
       props.sessionId,
       agentName,
       characters.detective.eastworldId!,
       { history: [], conversation: {} },
     );
-    //  eslint-disable-next-line react-hooks/exhaustive-deps
   }, [agentName]);
 
   const chat = async (message: string) => {
@@ -64,8 +65,11 @@ const ChatModal = (props: ChatModalProps) => {
       ...messages,
       { role: Message.role.USER, content: message },
     ]);
+
     setMessage("");
+
     let interact;
+
     try {
       interact = await props.eastworldClient.gameSessions.interact(
         props.sessionId,
@@ -75,11 +79,14 @@ const ChatModal = (props: ChatModalProps) => {
     } catch (e) {
       return;
     }
+
     const response = interact.response;
+
     if ("content" in response) {
       setMessageHistory(messages => [...messages, response]);
     } else {
       close();
+
       PubSub.publish(Topics.action, {
         character: agentName,
         action: response.action,
@@ -97,7 +104,7 @@ const ChatModal = (props: ChatModalProps) => {
     PubSub.publish(Topics.giveKeysToGame);
     onClose();
   };
-  // We want the transparent part of the modal to close on click
+
   const handleCardClick = (e: React.MouseEvent) => {
     e.stopPropagation();
   };
@@ -105,70 +112,62 @@ const ChatModal = (props: ChatModalProps) => {
   return (
     <>
       <Modal isOpen={isOpen} onClose={close} isCentered>
-        <ModalOverlay />
+        <ModalOverlay onClick={close} />
         <ModalContent
-          maxW="fit-content"
-          maxH={"fit-content"}
+          maxW="90vw"
+          maxH="fit-content"
           bg="transparent"
-          boxShadow={"none"}
-          onClick={close}
+          boxShadow="none"
         >
           <ModalBody>
             <VStack>
               <Stack
                 direction={{ base: "column", xl: "row" }}
-                width={"80vw"}
-                maxW={"1500px"}
+                width="100%"
+                height="auto"
                 justifyContent="center"
                 alignItems="center"
-                gap={6}
+                gap={4}
               >
                 <AspectRatio
-                  width={{ base: "80%", xl: "50%" }}
+                  width={{ base: "100%", xl: "50%" }}
+                  height="70vh"
                   ratio={1}
-                  maxWidth={"1100px"}
                   onClick={handleCardClick}
                 >
                   <Center paddingLeft={3} paddingRight={3}>
-                    <Image
-                      borderRadius="xl"
-                      src={photoPath}
-                      objectFit={"cover"}
-                      boxShadow={"0px 0px 5px 6px #333"}
-                    ></Image>
-                    <Image
-                      position="absolute"
-                      bottom="0"
-                      width="100%"
-                      height="15%"
-                      borderRadius={"xl"}
-                      src="/assets/web/blackboard.jpg"
-                    ></Image>
+                    <Image src={photoPath} objectFit={"cover"}></Image>
                     <Center
                       position="absolute"
                       bottom="0"
                       width="100%"
+                      bg="blackAlpha.700"
                       height="15%"
-                      borderRadius={"xl"}
-                      fontFamily={"cursive"}
+                      borderRadius={"l"}
+                      fontFamily={"pretendardExtraBold"}
                       textColor={"white"}
-                      fontSize={"5xl"}
+                      fontSize={"3xl"}
+                      textAlign={"center"}
+                      letterSpacing={"0.2rem"}
                     >
                       {EnglishToKorean(agentName)}
                     </Center>
                   </Center>
                 </AspectRatio>
                 <AspectRatio
-                  width={{ base: "80%", xl: "50%" }}
+                  width={{ base: "100%", xl: "50%" }}
+                  height="70vh"
                   ratio={1}
-                  maxWidth={"1100px"}
                   paddingLeft={3}
                   paddingRight={3}
                   borderRadius="xl"
-                  boxShadow={"0px 0px 5px 6px #333"}
                   onClick={handleCardClick}
                 >
-                  <Card width="100%" height="100%" fontFamily={"ptserif"}>
+                  <Card
+                    width="100%"
+                    height="100%"
+                    fontFamily={"pretendardLight"}
+                  >
                     <CardBody width="100%" height="100%">
                       <Flex direction="column" h="full">
                         <Box
@@ -181,17 +180,18 @@ const ChatModal = (props: ChatModalProps) => {
                           {messageHistory.map((message, index) => (
                             <Box
                               key={index}
-                              borderRadius={"xl"}
+                              borderRadius={"0.5vw"}
                               paddingTop={1}
                               paddingBottom={1}
                               paddingLeft={3}
                               paddingRight={3}
                               marginBottom={3}
                               width={"fit-content"}
+                              color="white"
                               backgroundColor={
                                 message.role === Message.role.USER
-                                  ? "gray.500"
-                                  : "blue.700"
+                                  ? "gray.900"
+                                  : "red.500"
                               }
                               marginLeft={
                                 message.role === Message.role.USER
@@ -204,9 +204,7 @@ const ChatModal = (props: ChatModalProps) => {
                                   : "0"
                               }
                             >
-                              <Text fontFamily={"pretendardLight"} key={index}>
-                                {message.content}
-                              </Text>
+                              <Text key={index}>{message.content}</Text>
                             </Box>
                           ))}
                         </Box>
@@ -243,20 +241,25 @@ const ChatModal = (props: ChatModalProps) => {
                 </AspectRatio>
               </Stack>
               <Card
-                width={"50vw"}
-                maxW={"2250px"}
-                height={"20%"}
+                width={"100%"}
+                height={"15%"}
                 borderRadius="xl"
-                boxShadow={"0px 0px 5px 6px #333"}
                 onClick={handleCardClick}
               >
-                <CardBody width="100%" height="100%">
+                <CardBody
+                  width="100%"
+                  height="100%"
+                  borderRadius="xl"
+                  boxShadow="lg"
+                  bg="blackAlpha.900"
+                  color="white"
+                >
                   <Textarea
-                    fontFamily={"pretendardLight"}
                     size={"lg"}
                     resize={"none"}
                     rows={5}
-                    placeholder="Jot down some notes here..."
+                    fontFamily={"pretendardLight"}
+                    placeholder="이곳에 발견한 증거를 기록해보세요..."
                     value={props.notes}
                     onChange={e => props.setNotes(e.target.value)}
                   ></Textarea>

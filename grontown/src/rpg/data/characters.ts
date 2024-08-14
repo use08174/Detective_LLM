@@ -52,7 +52,6 @@ const characters: Record<string, Character> = {
         photo: "assets/photos/david.jpeg",
         interactTopic: Topics.enterChat,
     }),
-
     Kim: createCharacter({
         eastworldId: "Kim",
         sprite: "police_officer",
