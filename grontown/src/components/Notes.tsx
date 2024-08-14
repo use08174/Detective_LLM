@@ -59,7 +59,7 @@ const NotesModal = ({ notes, setNotes }: NotesModalProps) => {
             width={"90%"}
           />
           {!isSmallScreen && (
-            <Heading fontFamily="azonix" size="lg">
+            <Heading fontFamily="azonix" size="lg" textColor={"black"}>
               Notes
             </Heading>
           )}

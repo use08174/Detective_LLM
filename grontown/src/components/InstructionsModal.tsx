@@ -68,7 +68,7 @@ export default function InstructionsModal() {
             margin="1vh 0 1vh 0"
           />
           {!isSmallScreen && (
-            <Heading fontFamily="azonix" size="lg">
+            <Heading fontFamily="azonix" size="lg" textColor={"black"}>
               Info
             </Heading>
           )}

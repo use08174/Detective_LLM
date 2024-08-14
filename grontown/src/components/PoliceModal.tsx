@@ -130,10 +130,10 @@ How close is this to the actual plot?
                     height="15%"
                     borderRadius={"xl"}
                     fontFamily={"cursive"}
-                    textColor={"gray.800"}
+                    textColor={"white"}
                     fontSize={"5xl"}
                   >
-                    Police Chief Locke
+                    형사
                   </Center>
                 </Center>
               </AspectRatio>
@@ -155,24 +155,24 @@ How close is this to the actual plot?
                           size={"lg"}
                           marginBottom={2}
                         >
-                          Who should we arrest?
+                          누구를 체포할까요?
                         </Heading>
                         <Input
                           fontFamily={"pretendardLight"}
                           size={"lg"}
                           value={suspect}
                           autoComplete="off"
-                          placeholder="Full name of the suspect"
+                          placeholder="범인의 이름"
                           onChange={e => setSuspect(e.target.value)}
                         />
                         <FormErrorMessage fontFamily={"pretendardLight"}>
-                          Invalid suspect!
+                          잘못된 이름입니다!
                         </FormErrorMessage>
                       </FormControl>
                       <Flex flex="1">
                         <FormControl height="100%">
                           <Heading fontFamily={"azonix"} size={"lg"}>
-                            How did it happen and why?
+                            무슨 일이 일어났나요?
                           </Heading>
                           <Textarea
                             fontFamily={"pretendardLight"}
@@ -193,7 +193,7 @@ How close is this to the actual plot?
                           onClick={() => arrest()}
                           isDisabled={!suspectValid}
                         >
-                          Arrest
+                          체포
                         </Button>
                       </Box>
                     </Flex>

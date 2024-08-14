@@ -73,7 +73,7 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
             margin="1vh 0 1vh 0"
           />
           {!isSmallScreen && (
-            <Heading fontFamily="azonix" size="lg">
+            <Heading fontFamily="azonix" size="lg" textColor={"black"}>
               Clues
             </Heading>
           )}
@@ -87,7 +87,7 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
               <Accordion allowToggle width={"100%"}>
                 {foundEvidence.length === 0 && (
                   <Center>
-                    <Heading size={"xl"}>No evidence found yet.</Heading>
+                    <Heading size={"xl"}>증거가 없습니다.</Heading>
                   </Center>
                 )}
                 {foundEvidence.map((evidenceKey, index) => (
