@@ -89,7 +89,7 @@ const EvidenceModal = () => {
                 </Center>
               </AspectRatio>
               <Text
-                color="white"
+                color="black"
                 whiteSpace="pre-wrap"
                 fontFamily={"pretendardLight"}
                 fontSize={"xl"}
