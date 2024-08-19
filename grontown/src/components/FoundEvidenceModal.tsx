@@ -23,6 +23,7 @@ import evidence from "rpg/data/evidence";
 import { getGameState } from "rpg/data/persistence";
 import Topics from "rpg/data/topics";
 import CroppedImage from "./util/CroppedImage";
+import {EnglishToKorean} from "./util/Korean";
 
 interface FoundEvidenceModalProps {
   notes: string;
@@ -94,7 +95,7 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
                   <AccordionItem key={index} width={"100%"}>
                     <AccordionButton>
                       <Box as="span" flex="1" textAlign="left">
-                        <Heading size={"xl"}>{evidenceKey}</Heading>
+                        <Heading size={"xl"}>{EnglishToKorean(evidenceKey)}</Heading>
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
@@ -118,7 +119,7 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
               {foundEvidence.length > 0 && (
                 <Textarea
                   fontFamily={"pretendardLight"}
-                  placeholder="Notice anything in the evidence? Write it down to yourself here."
+                  placeholder="증거에서 뭔가를 찾으셨나요? 여기에 적어두세요!"
                   value={props.notes}
                   rows={10}
                   onChange={e => props.setNotes(e.target.value)}
