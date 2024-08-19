@@ -117,7 +117,7 @@
       ],
       "memory": {
         "importance": 8,
-        "description": "데이비드, 우현, 승은은 12시에 잠깐 리허설을 준비하다가 12시 반에 부스 구경을 위해 헤어졌다. 데이비드와 승은은 함께 부스 구경을 했고, 우현은 춤 연습을 혼자서 더 하고 있었다.",
+        "description": "데이비드, 조우현, 정승은은 12시에 잠깐 리허설을 준비하다가 12시 반에 부스 구경을 위해 헤어졌다. 데이비드와 정승은은 함께 부스 구경을 했고, 조우현은 춤 연습을 혼자서 더 하고 있었다.",
         "embedding": null,
         "timestamp": null
       }
@@ -234,7 +234,7 @@
       ],
       "memory": {
         "importance": 8,
-        "description": "정승은이 최근 지윤에게 과도한 관심과 함께 지나친 애정공세를 하고 있었다.",
+        "description": "정승은이 최근 전지윤에게 과도한 집착과 함께 지나친 스토킹을 하고 있다.",
         "embedding": null,
         "timestamp": null
       }
@@ -243,7 +243,7 @@
       "known_by": ["11f7ce4a-632a-4813-9748-fe94e65ca066"],
       "memory": {
         "importance": 6,
-        "description": "소연은 축제 당일 오후 1시 40분경 정승은이 화장실에 급하게 뛰어가는 것을 목격했다.",
+        "description": "배소연은 축제 당일 오후 1시 40분경 정승은이 화장실에 급하게 뛰어가는 것을 목격했다.",
         "embedding": null,
         "timestamp": null
       }
@@ -252,7 +252,7 @@
       "known_by": ["44c110d9-4ad3-40f9-8b0e-176c29164489"],
       "memory": {
         "importance": 6,
-        "description": "수민은 축제 전날 밤 늦게까지 학교에 남아 준비를 하고 있었고, 교무실 근처에서 이상한 소리를 들었다고 주장한다.",
+        "description": "심수민은 축제 전날 밤 늦게까지 학교에 남아 준비를 하고 있었고, 교무실 근처에서 이상한 소리를 들었다고 주장한다.",
         "embedding": null,
         "timestamp": null
       }
@@ -264,7 +264,7 @@
       ],
       "memory": {
         "importance": 9,
-        "description": "수민은 승은에게 망신을 주기 위해 강당의 전등을 껐다.",
+        "description": "심수민은 정승은에게 망신을 주기 위해 강당의 전등을 껐다.",
         "embedding": null,
         "timestamp": null
       }
@@ -273,7 +273,7 @@
       "known_by": ["44c110d9-4ad3-40f9-8b0e-176c29164489"],
       "memory": {
         "importance": 9,
-        "description": "수민은 승은의 비명 소리가 들리자 당황하여 다시 전등을 켰다.",
+        "description": "심수민은 정승은의 비명 소리가 들리자 당황하여 다시 전등을 켰다.",
         "embedding": null,
         "timestamp": null
       }
@@ -285,7 +285,7 @@
       ],
       "memory": {
         "importance": 9,
-        "description": "수민은 공연 당시 강당에서 보이지 않았다.",
+        "description": "심수민은 공연 당시 강당에서 보이지 않았다.",
         "embedding": null,
         "timestamp": null
       }
@@ -310,7 +310,7 @@
       "known_by": ["3fd6d693-9a72-471d-a7db-e0f7de7dcb1e"],
       "memory": {
         "importance": 9,
-        "description": "지윤은 승은의 애정공세를 매우 불편하고 불쾌하게 생각한다.",
+        "description": "전지윤은 정승은의 애정공세를 매우 불편하고 불쾌하게 생각한다.",
         "embedding": null,
         "timestamp": null
       }
@@ -319,7 +319,7 @@
       "known_by": ["3fd6d693-9a72-471d-a7db-e0f7de7dcb1e"],
       "memory": {
         "importance": 9,
-        "description": "지윤은 은하가 승은을 집착적으로 좋아한다는 사실을 알고 있다. 또한 은하가 승은에게 거절당한 후 감정적으로 매우 불안해졌다는 사실도 알고 있다.",
+        "description": "전지윤은 서은하가 정승은을 집착적으로 좋아한다는 사실을 알고 있다. 또한 서은하가 정승은에게 거절당한 후 감정적으로 매우 불안해졌다는 사실도 알고 있다.",
         "embedding": null,
         "timestamp": null
       }
