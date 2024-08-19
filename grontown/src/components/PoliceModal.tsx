@@ -56,16 +56,16 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
   };
 
   const arrest = async () => {
-    if (KoreanToEnglish(suspect) === "Eunha") {
+    if (KoreanToEnglish(suspect) === "Jiyoon") {
       const score = await eastworldClient.llm.rate(
-        `A player is playing a murder mystery game as a detective.
-The actual plot they should discover is as follows:
+        `플레이어가 탐정으로서 살인 미스터리 게임을 플레이하고 있습니다.
+그들이 발견해야 할 실제 플롯은 다음과 같습니다:
 "${story.explanation}"
 
-This is the player's explanation of what happened:
+이것은플레이어가설명한사건의내용입니다:
 "${explanation}"
 
-How close is this to the actual plot?
+이것이 실제 플롯과 얼마나 가까운가요?
 `,
       );
       const result: ResultScreenProps = {
