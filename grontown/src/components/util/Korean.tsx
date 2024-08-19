@@ -38,7 +38,13 @@ const _KoreanToEnglish: TranslationMap = {
 
 // If can't find the key, return ""
 const translate = (map: TranslationMap, key: string): string => {
-  return map[key] || "";
+  // if exists, return the value
+  // if not, return the key
+  if (map[key]) {
+    return map[key];
+  } else {
+    return key;
+  }
 };
 
 
