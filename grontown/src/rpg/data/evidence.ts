@@ -38,6 +38,16 @@ const evidence = {
     photo: "assets/photos/trashcan.jpg",
     sprite: "trashcan",
   },
+  diary: {
+    text: `<정승은의 일기장>이다. 
+
+    지윤이가 자꾸 생각이 난다. 오늘도 그녀는 예뻤다.
+
+    지윤이도 사실 나를 좋아하지만 부끄러워하는 것 같다.
+    `,
+    photo: "assets/photos/diary.png",
+    sprite: "diary",
+  },
 };
 
 export default evidence;

@@ -1126,6 +1126,18 @@
                  "width":0,
                  "x":864.961,
                  "y":1192.82
+                }, 
+                {
+                 "height":0,
+                 "id":288,
+                 "name":"diary",
+                 "point":true,
+                 "rotation":0,
+                 "type":"diary",
+                 "visible":true,
+                 "width":0,
+                 "x":529.824317755711,
+                 "y":1159.6416915492
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1134,7 +1146,7 @@
          "y":0
         }],
  "nextlayerid":27,
- "nextobjectid":288,
+ "nextobjectid":289,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.11.0",

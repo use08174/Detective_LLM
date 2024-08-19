@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="50" height="70" tilewidth="32" tileheight="32" infinite="0" nextlayerid="27" nextobjectid="288">
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="50" height="70" tilewidth="32" tileheight="32" infinite="0" nextlayerid="27" nextobjectid="289">
  <editorsettings>
   <export target="grontown_embedded.json" format="json"/>
  </editorsettings>
@@ -429,6 +429,9 @@
    <point/>
   </object>
   <object id="285" name="Police" type="Police" x="864.961" y="1192.82">
+   <point/>
+  </object>
+  <object id="288" name="diary" type="diary" x="529.824" y="1159.64">
    <point/>
   </object>
  </objectgroup>
