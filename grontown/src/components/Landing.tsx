@@ -43,7 +43,7 @@ export const Landing = () => {
                 src="/assets/sprites/dead_harrington.png"
                 height="30%"
                 width="30%"
-                margin="3vw"
+                margin="2vw"
               />
               <Text
                 fontFamily="aurora"
@@ -62,9 +62,10 @@ export const Landing = () => {
               flex="1"
               justifyContent="center"
               maxWidth="100%"
+              marginTop="3vh"
             >
               <Box
-                padding={{ base: "2", xl: "8" }}
+                padding={{ base: "2", xl: "5" }}
                 bgColor="black"
                 borderRadius="md"
                 boxShadow="md"
