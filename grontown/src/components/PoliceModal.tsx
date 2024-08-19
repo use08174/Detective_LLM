@@ -129,7 +129,7 @@ How close is this to the actual plot?
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    fontFamily={"cursive"}
+                    fontFamily={"PretendardSemiBold"}
                     textColor={"white"}
                     fontSize={"5xl"}
                   >
