@@ -24,7 +24,7 @@ import Topics from "rpg/data/topics";
 import { EastworldClient, Message } from "eastworld-client";
 import { useEffect, useRef, useState } from "react";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import { EnglishToKorean } from "./util/Korean";
+import { EnglishToKorean, KoreanToEnglish } from "./util/Korean";
 
 type ChatModalProps = {
   sessionId: string;
@@ -54,8 +54,8 @@ const ChatModal = (props: ChatModalProps) => {
 
     props.eastworldClient.gameSessions.startChat(
       props.sessionId,
-      agentName,
-      characters.detective.eastworldId!,
+      EnglishToKorean(agentName),
+      EnglishToKorean(characters.detective.eastworldId!),
       { history: [], conversation: {} },
     );
   }, [agentName]);
@@ -73,7 +73,7 @@ const ChatModal = (props: ChatModalProps) => {
     try {
       interact = await props.eastworldClient.gameSessions.interact(
         props.sessionId,
-        agentName,
+        EnglishToKorean(agentName),
         message,
       );
     } catch (e) {
@@ -88,7 +88,7 @@ const ChatModal = (props: ChatModalProps) => {
       close();
 
       PubSub.publish(Topics.action, {
-        character: agentName,
+        character: EnglishToKorean(agentName),
         action: response.action,
       });
     }
