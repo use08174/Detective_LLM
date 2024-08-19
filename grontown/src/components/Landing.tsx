@@ -124,16 +124,11 @@ export const Landing = () => {
           </VStack>
         </Box>
         <AspectRatio flex="4" ratio={1350 / 1150}>
-          <video
-            autoPlay
-            playsInline
-            loop
-            muted
+          <img
+            src="/assets/web/Newspaper.png"
+            alt="Newspaper"
             style={{ width: "100%", height: "100%" }}
-          >
-            <source src="/assets/web/gameplay.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          />
         </AspectRatio>
       </Stack>
     </Center>
