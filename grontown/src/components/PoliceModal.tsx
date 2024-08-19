@@ -129,7 +129,7 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
                     width="100%"
                     height="15%"
                     borderRadius={"xl"}
-                    fontFamily={"PretandardSemiBold"}
+                    fontFamily={"PretendardSemiBold"}
                     textColor={"white"}
                     fontSize={"5xl"}
                   >
