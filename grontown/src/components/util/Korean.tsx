@@ -4,7 +4,7 @@ type TranslationMap = {
 
 // EnglishToKorean 객체
 const _EnglishToKorean: TranslationMap = {
-  "Detective": "탐정",
+  "Detective": "김프메",
   "Sumin": "심수민",
   "Woohyun": "조우현",
   "Kim": "김담임",
@@ -21,7 +21,7 @@ const _EnglishToKorean: TranslationMap = {
 
 // KoreanToEnglish 객체
 const _KoreanToEnglish: TranslationMap = {
-  "탐정": "Detective",
+  "김프메": "Detective",
   "심수민": "Sumin",
   "조우현": "Woohyun",
   "김담임": "Kim",

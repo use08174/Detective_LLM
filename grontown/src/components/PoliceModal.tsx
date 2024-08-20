@@ -37,6 +37,7 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
   const [suspect, setSuspect] = useState("");
   const [suspectValid, setSuspectValid] = useState(false);
   const [explanation, setExplanation] = useState("");
+  const [explanationValid, setExplanationValid] = useState(true);
 
   useEffect(() => {
     let sanitizedName = KoreanToEnglish(suspect);
@@ -45,6 +46,10 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
       sanitizedName in characters && characters[sanitizedName].arrestable,
     );
   }, [suspect]);
+
+  useEffect(() => {
+    setExplanationValid(explanation.trim() !== "");
+  }, [explanation]);
 
   PubSub.subscribe(Topics.enterArrestModal, () => {
     onOpen();
@@ -56,6 +61,11 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
   };
 
   const arrest = async () => {
+    if (!explanationValid) {
+      setExplanationValid(false);
+      return;
+    }
+
     if (KoreanToEnglish(suspect) === "Jiyoon") {
       const score = await eastworldClient.llm.rate(
         `플레이어가 탐정으로서 살인 미스터리 게임을 플레이하고 있습니다.
@@ -170,7 +180,7 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
                         </FormErrorMessage>
                       </FormControl>
                       <Flex flex="1">
-                        <FormControl height="100%">
+                        <FormControl height="100%" isInvalid={!explanationValid}>
                           <Heading fontFamily={"azonix"} size={"lg"}>
                             무슨 일이 일어났나요?
                           </Heading>
@@ -182,6 +192,9 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
                             value={explanation}
                             onChange={e => setExplanation(e.target.value)}
                           />
+                          <FormErrorMessage fontFamily={"pretendardLight"}>
+                            설명을 적어주셔야 합니다.
+                          </FormErrorMessage>
                         </FormControl>
                       </Flex>
                       <Box width="100%">
@@ -191,7 +204,7 @@ const PoliceModal = ({ eastworldClient }: PoliceModalProps) => {
                           colorScheme="red"
                           flexShrink={0}
                           onClick={() => arrest()}
-                          isDisabled={!suspectValid}
+                          isDisabled={!suspectValid || !explanationValid}
                         >
                           체포
                         </Button>
