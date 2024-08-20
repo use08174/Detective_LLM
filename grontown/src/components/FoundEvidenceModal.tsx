@@ -23,7 +23,7 @@ import evidence from "rpg/data/evidence";
 import { getGameState } from "rpg/data/persistence";
 import Topics from "rpg/data/topics";
 import CroppedImage from "./util/CroppedImage";
-import {EnglishToKorean} from "./util/Korean";
+import { EnglishToKorean } from "./util/Korean";
 
 interface FoundEvidenceModalProps {
   notes: string;
@@ -88,14 +88,18 @@ export default function FoundEvidenceModal(props: FoundEvidenceModalProps) {
               <Accordion allowToggle width={"100%"}>
                 {foundEvidence.length === 0 && (
                   <Center>
-                    <Heading size={"xl"}>증거가 없습니다.</Heading>
+                    <Heading fontFamily={"pretendardExtraBold"} size={"xl"}>
+                      증거가 없습니다
+                    </Heading>
                   </Center>
                 )}
                 {foundEvidence.map((evidenceKey, index) => (
                   <AccordionItem key={index} width={"100%"}>
                     <AccordionButton>
                       <Box as="span" flex="1" textAlign="left">
-                        <Heading size={"xl"}>{EnglishToKorean(evidenceKey)}</Heading>
+                        <Heading size={"xl"} fontFamily={"pretendardLight"}>
+                          {EnglishToKorean(evidenceKey)}
+                        </Heading>
                       </Box>
                       <AccordionIcon />
                     </AccordionButton>
