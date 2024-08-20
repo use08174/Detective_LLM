@@ -14,7 +14,7 @@ import { useState } from "react";
 import evidence from "rpg/data/evidence";
 import { getGameState, saveGameState } from "rpg/data/persistence";
 import Topics from "rpg/data/topics";
-import {EnglishToKorean} from "./util/Korean";
+import { EnglishToKorean } from "./util/Korean";
 
 const EvidenceModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -95,6 +95,8 @@ const EvidenceModal = () => {
                 fontFamily={"pretendardLight"}
                 fontSize={"xl"}
                 width={"50%"}
+                maxHeight={"50vh"}
+                overflowY="auto"
               >
                 {text}
               </Text>

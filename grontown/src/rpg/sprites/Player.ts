@@ -123,12 +123,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
           if (this.scene.input.keyboard) {
             this.scene.input.keyboard.enabled = false;
           }
-          setInterval(() => {
-            const result: ResultScreenProps = {
-              status: GameResult.DEAD,
-            };
-            PubSub.publish(Topics.endGame, result);
-          }, 3000);
         }
       },
     );

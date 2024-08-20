@@ -22,7 +22,7 @@ const evidence = {
   newspaper: {
     text: `프메 고등학교 교내 신문이다. 
     
-    속보 : 프메 고등학교 학생회장 정OO 군이 사실은 스테로이드 복용자임이 밝혀져 충격을 주고 있다.`,
+    속보 : 프메 고등학교 학생회장 정OO 군이 사실은 내추럴이 아닌 스테로이드 복용자임이 밝혀져 충격을 주고 있다. 프메고, 이대로 괜찮은가?`,
     photo: "assets/photos/newspaper.jpeg",
     sprite: "newspaper",
   },
