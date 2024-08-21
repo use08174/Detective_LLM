@@ -1,4 +1,4 @@
-# 🎮 **2024-1학기 Prometheus 6기 Project**
+# 🔥 **2024-1학기 Prometheus 6기 Project**
 
 ## 🔍 **프메 고등학교 살인사건**  
 
@@ -82,7 +82,7 @@ $ pdm run uvicorn server.main:app --reload
 ```
 
 
-### 2️⃣ **Install Eastworld Framework**
+### 2️⃣ **Install Promschool**
 
 ```bash
 $ cd promschool
@@ -92,7 +92,6 @@ $ npm install
 $ npm start
 
 ```
-
 
 ---
 ## 👥 **Members**
