@@ -17,6 +17,7 @@ const _EnglishToKorean: TranslationMap = {
   "newspaper": "신문",
   "cassette": "카세트",
   "drink": "음료수",
+  "diary": "일기",
 };
 
 // KoreanToEnglish 객체
@@ -34,6 +35,7 @@ const _KoreanToEnglish: TranslationMap = {
   "신문": "newspaper",
   "카세트": "cassette",
   "음료수": "drink",
+  "일기": "diary",
 };
 
 // If can't find the key, return ""
