@@ -9,14 +9,14 @@ from schema.memory import Lore, Memory
 
 
 class Parameter(BaseModel):
-    name: str = Field(..., regex="^[a-zA-Z0-9_-]{1,64}$")
+    name: str = Field(..., pattern="^[a-zA-Z0-9_-]{1,64}$")
     description: str
     type: Literal["number", "string", "boolean"] = "string"
     enum: List[str] = Field(default_factory=list)
 
 
 class Action(BaseModel):
-    name: str = Field(..., regex="^[a-zA-Z0-9_-]{1,64}$")
+    name: str = Field(..., pattern="^[a-zA-Z0-9_-]{1,64}$")
     description: str
     parameters: List[Parameter] = Field(default_factory=list)
 

@@ -95,14 +95,6 @@ async def create_session(
 ):
     """Given a Game, creates a game session and populates the Agents
     with their lore and knowledge.
-
-    <h3>Args:</h3>
-
-    - **game_uuid** (uuid4 as str): The uuid of the GameDef that this session will
-    populate from.
-
-    <h3>Returns:</h3>
-    - **session_uuid** (uuid4 as str): the uuid of the session created
     """
     game_def = await get_game_def(game_uuid, redis)
 
@@ -113,17 +105,15 @@ async def create_session(
         memories_returned=config_parser.getint(
             "memory_config", "default_memories_returned", fallback=5
         ),
-        embedding_dims=llm.embedding_size,
+        embedding_dims = (getattr(llm, "embedding_size", None) or 3072)
     )
 
-    # TODO: embed personal lore at the same time as this
     async def lore_task(lore: Lore):
         lore.memory.embedding = await llm.embed(lore.memory.description)
 
-    set_lore_coroutines: List[Awaitable[None]] = []
-    for shared_lore in game_def.shared_lore:
-        set_lore_coroutines.append(lore_task(shared_lore))
-
+    set_lore_coroutines: List[Awaitable[None]] = [
+        lore_task(shared_lore) for shared_lore in game_def.shared_lore
+    ]
     await asyncio.gather(*set_lore_coroutines)
 
     awaitable_agents: List[Awaitable[GenAgent]] = []
@@ -139,13 +129,11 @@ async def create_session(
             memory_config.memories_returned,
             TIRetriever(memory_config),
         )
-
         awaitable_agents.append(GenAgent.create(knowledge, llm, memory))
 
     agents = await asyncio.gather(*awaitable_agents)
     session = Session(uuid=uuid.uuid4(), game_def=game_def, agents=agents)
     sessions[session.uuid] = session
-
     return str(session.uuid)
 
 
