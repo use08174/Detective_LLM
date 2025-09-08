@@ -19,12 +19,12 @@ from server.router import (
     authorization_handlers,
     game_def_handlers,
     llm_handlers,
-    session_handlers,
     util_handlers,
 )
 from server.typecheck_fighter import pipeline_exec
 from server.util.json_loader import load_games_from_path
 from server.util.sso import generate_github_sso, generate_google_sso
+from server.router import session_handlers
 
 GAMES_DEFS_SET = "GAME_DEFS"
 
