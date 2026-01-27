@@ -157,10 +157,27 @@ export default class Main extends Phaser.Scene {
   }
 
   private setupPubSub() {
+    // PubSub.subscribe(Topics.giveKeysToDom, () => {
+    //   if (this.input.keyboard && this.input.keyboard.enabled) {
+    //     this.input.keyboard.enabled = false;
+    //     this.input.keyboard.disableGlobalCapture();
+    //   }
+    // });
     PubSub.subscribe(Topics.giveKeysToDom, () => {
-      if (this.input.keyboard && this.input.keyboard.enabled) {
-        this.input.keyboard.enabled = false;
-        this.input.keyboard.disableGlobalCapture();
+      const kb = this.input?.keyboard;
+      if (!kb) return;
+
+      if (kb.enabled) {
+        kb.enabled = false;
+
+        // 안전하게 다음 tick/프레임으로 미루기
+        this.time.delayedCall(0, () => {
+          try {
+            kb.disableGlobalCapture();
+          } catch (e) {
+            console.warn("disableGlobalCapture failed (ignored):", e);
+          }
+        });
       }
     });
     PubSub.subscribe(Topics.giveKeysToGame, () => {
